@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.navigationandfragment.databinding.FragmentFirstBinding
 import com.example.navigationandfragment.databinding.FragmentSecondBinding
 
@@ -39,6 +40,7 @@ class SecondFragment : Fragment() {
         arguments?.let {
             val isim = SecondFragmentArgs.fromBundle(it).UserName
             binding.txtUserName.setText(isim)
+            //Toast.makeText(requireContext(),"Mesaj",Toast.LENGTH_LONG).show() context yerıne requireContext kullanılır.
         }
 
     }
